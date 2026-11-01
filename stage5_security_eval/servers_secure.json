@@ -1,0 +1,11 @@
+{
+  "shop_db": {
+    "command": "python",
+    "args": ["-m", "stage5_security_eval.server_secure"],
+    "context_resources": ["schema://tables"]
+  },
+  "reports": {
+    "command": "python",
+    "args": ["-m", "stage5_security_eval.report_server_secure"]
+  }
+}

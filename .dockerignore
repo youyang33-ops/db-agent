@@ -1,0 +1,8 @@
+.venv
+.env
+**/__pycache__
+*.egg-info
+data/shop.db
+reports
+logs
+.pytest_cache

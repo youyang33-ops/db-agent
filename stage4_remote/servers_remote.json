@@ -1,0 +1,11 @@
+{
+  "shop_db": {
+    "url": "http://127.0.0.1:8000/mcp",
+    "token_env": "MCP_API_TOKEN",
+    "context_resources": ["schema://tables"]
+  },
+  "reports": {
+    "command": "python",
+    "args": ["-m", "stage3_agent.report_server"]
+  }
+}

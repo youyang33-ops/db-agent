@@ -1,0 +1,11 @@
+{
+  "shop_db": {
+    "command": "python",
+    "args": ["-m", "stage2_mcp_server.server"],
+    "context_resources": ["schema://tables"]
+  },
+  "reports": {
+    "command": "python",
+    "args": ["-m", "stage3_agent.report_server"]
+  }
+}

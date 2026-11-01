@@ -1,0 +1,33 @@
+[project]
+name = "db-agent"
+version = "0.1.0"
+description = "数据库问答 Agent：一个用 MCP Python SDK v2 从零搭到上线的学习项目"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]==2.3.0",
+    "openai>=1.40",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+# 用 `pip install -e .` 安装后，任何目录下都能 `import common`、`import stage2_mcp_server` 等，
+# 这样 MCP 子进程（stdio server）也能找到这些包。
+[tool.setuptools]
+packages = [
+    "common",
+    "data",
+    "stage1_function_calling",
+    "stage2_mcp_server",
+    "stage3_agent",
+    "stage4_remote",
+    "stage5_security_eval",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
